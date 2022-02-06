@@ -1,0 +1,11 @@
+
+{
+    // for coding convention
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true,
+
+    "rubyTestExplorer.logpanel": true,
+    "rubyTestExplorer.testFramework": "minitest",
+    "rubyTestExplorer.minitestCommand": "bundle exec rake",
+    "rubyTestExplorer.minitestDirectory": "./test/",
+}
