@@ -1,24 +1,28 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 개발환경
 
-Things you may want to cover:
+* Ruby 2.7.5
+* Rails 7.0.1
 
-* Ruby version
+## 사용법
 
-* System dependencies
+* DB 초기화
 
-* Configuration
+```bash
+rails db:setup
+```
 
-* Database creation
+* 문서 생성 (YARD)
 
-* Database initialization
+```bash
+bin/generate_docs
+```
 
-* How to run the test suite
+# README Todo list
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+* [ ] Configuration
+* [ ] How to run the test suite
+* [ ] Services (job queues, cache servers, search engines, etc.)
+* [ ] Deployment instructions
 * ...
