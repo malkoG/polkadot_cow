@@ -12,5 +12,10 @@
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds",
     "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss ./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+  },
+  "devDependencies": {
+    "@arkweid/lefthook": "^0.7.7",
+    "eslint": "^8.8.0",
+    "stylelint": "^14.3.0"
   }
 }
