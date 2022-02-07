@@ -18,5 +18,12 @@ module PolkadotCow
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    config.generators do |g|
+      g.orm             :active_record
+      g.template_engine :erb
+      g.test_framework  :test_unit, fixture: false
+      g.fixture_replacement :factory_bot
+      g.factory_bot dir: 'test/factories'
+    end
   end
 end
