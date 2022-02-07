@@ -1,1 +1,35 @@
+@import 'bootswatch/dist/minty/variables';
 @import 'bootstrap/scss/bootstrap';
+@import 'bootswatch/dist/minty/bootswatch';
+
+
+nav {
+  * {
+    color: white !important;
+  }
+
+  .nav-item {
+    min-width: 2.5rem;
+    text-align: center;
+
+    &:hover {
+      background-color: #cfcfcf;
+      opacity: 0.5;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .container-md {
+    max-width: 992px !important;
+  }
+}
+
+.sidebar {
+  @extend .d-none-md !optional;
+  @extend .col-md-3;
+}
+
+.content {
+  @extend .col-md-6;
+}

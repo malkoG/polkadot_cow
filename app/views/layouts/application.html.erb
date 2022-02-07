@@ -11,6 +11,15 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render "layouts/navbar" %>
+    <div class="content-wrapper pt-4 d-flex justify-content-center">
+      <div class="container-md row">
+        <%= render "layouts/sidebar_profile" %>
+        <div class="content">
+          <%= yield %>
+        </div>
+        <%= render "layouts/sidebar_profile" %>
+      </div>
+    </div>
   </body>
 </html>
