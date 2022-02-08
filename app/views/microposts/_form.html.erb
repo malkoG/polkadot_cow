@@ -1,0 +1,13 @@
+<%= form_with(model: micropost, class: "micropost-form") do |form| %>
+  <div class="micropost-thumbnail">
+    <%= image_tag "https://via.placeholder.com/40" %>
+  </div>
+  <div class="micropost-body">
+    <%= form.text_area :content, placeholder: "무슨 일이 일어나고 있나요?", class: 'form-control' %>
+    <%= form.hidden_field :username, value: "아무개" %>
+
+    <div class="d-flex justify-content-end my-2 mb-4">
+      <%= form.submit "글쓰기", class: "btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
