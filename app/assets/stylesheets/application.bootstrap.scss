@@ -33,3 +33,61 @@ nav {
 .content {
   @extend .col-md-6;
 }
+
+.micropost {
+  $thumbnail-size: 2.5rem;
+
+  &-list-entry, &-form {
+    display: flex;
+  }
+
+  &-thumbnail {
+    padding-top: 0.25rem;
+    flex-basis: $thumbnail-size;
+
+    img {
+      width: $thumbnail-size;
+      height: $thumbnail-size;
+      border-radius: $thumbnail-size;
+    }
+  }
+
+  &-body {
+    margin-left: .75rem;
+    flex-basis: calc(100% - $thumbnail-size);
+
+    textarea {
+      border: none;
+    }
+  }
+
+  &-action {
+    padding: 0;
+    color: var(--bs-color);
+
+    width: 1.5rem;
+    height: 1.5rem;
+
+    text-align: center;
+    border-radius: 1.5rem;
+
+    cursor: pointer;
+
+    &::after {
+      content: none;
+    }
+
+    &:hover {
+      background-color: #cfcfcf;
+      opacity: 0.5;
+    }
+
+    & + ul button {
+      width: 100%;
+      text-align: left;
+      color: var(--bs-body-color);
+      background: transparent;
+      border: none;
+    }
+  }
+}

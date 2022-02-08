@@ -1,0 +1,24 @@
+<div id="<%= dom_id micropost %>" class="micropost-list-entry p-2">
+  <div class="micropost-thumbnail">
+    <%= image_tag "https://via.placeholder.com/40" %>
+  </div>
+  <div class="micropost-body">
+    <div class="micropost-header d-flex justify-content-between mb-1">
+      <div class="micropost-information">
+        <b><%= micropost.username %></b>
+      </div>
+      <button type="button" class="btn dropdown-toggle micropost-action" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="bi bi-three-dots"></i>
+      </button>
+      <ul class="dropdown-menu dropdown-menu-end">
+        <%#= link_to 메서드로는 해결되지 않아 button_to로 대체함 %>
+        <li class="dropdown-item">
+          <%= button_to "글 삭제하기", micropost_path(micropost), method: :delete %>
+        </li>
+      </ul>
+    </div>
+    <div class="micropost-content">
+      <%= micropost.content %>
+    </div>
+  </div>
+</div>

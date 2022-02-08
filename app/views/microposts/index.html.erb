@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render "form", micropost: @micropost %>
+
+<div id="microposts" class="card">
+  <% @microposts.each do |micropost| %>
+    <div class="border-bottom">
+      <%= render micropost %>
+    </div>
+  <% end %>
+</div>
